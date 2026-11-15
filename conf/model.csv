@@ -1,0 +1,15 @@
+# Recorded traffic model: offset_ms METHOD /path token
+# ('-' = no token). Loops over the test duration.
+0    GET /api/list   tok-alpha
+50   GET /api/list   tok-beta
+100  GET /api/heavy  tok-alpha
+150  GET /status     -
+200  GET /api/list   tok-gamma
+250  GET /api/heavy  tok-beta
+300  POST /api/list  tok-alpha
+400  GET /api/heavy  tok-alpha
+500  GET /api/list   tok-beta
+600  GET /status     -
+700  GET /api/heavy  tok-gamma
+800  GET /api/list   tok-alpha
+900  GET /api/heavy  tok-beta
